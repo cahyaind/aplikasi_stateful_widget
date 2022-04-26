@@ -29,7 +29,10 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(number.toString()),
+              Text(
+                number.toString(),
+                style: TextStyle(fontSize: 10 + number.toDouble()),
+              ),
               RaisedButton(
                 child: Text("Tambah"),
                 onPressed: tekanTombol,
