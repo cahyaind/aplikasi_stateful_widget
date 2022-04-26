@@ -10,19 +10,26 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  void tekanTombol() {}
+  int number = 0;
+
+  void tekanTombol() {
+    setState(() {
+      number = number + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Statfull Widget"),
+          title: Text("Stateful Widget"),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("7"),
+              Text(number.toString()),
               RaisedButton(
                 child: Text("Tambah"),
                 onPressed: tekanTombol,
